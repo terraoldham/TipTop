@@ -30,10 +30,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        groupControl.value = 1
-        if let defaultTipIndex = defaults.object(forKey: "defaultTipIndex") {
-            tipControl.selectedSegmentIndex = defaultTipIndex as! Int
-        }
         billField.becomeFirstResponder()
         calculationView.center.y  += view.bounds.height
         UIView.animate(withDuration: 0.7, delay: 1.0, options: .curveEaseOut, animations: {
@@ -41,6 +37,8 @@ class ViewController: UIViewController {
         }, completion: { finished in
             print("Animation success")
         })
+        groupControl.value = 1
+        calculateTip((Any).self)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -53,12 +51,21 @@ class ViewController: UIViewController {
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
         
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let defaultTipIndex = defaults.object(forKey: "defaultTipIndex") {
+            tipControl.selectedSegmentIndex = defaultTipIndex as! Int
+        }
+        calculateTip((Any).self)
+
     }
 
     @IBAction func calculateTip(_ sender: Any) {
+        print("hello")
+        print(tipControl.selectedSegmentIndex)
         
-        let tipPercentages = [0.18, 0.2, 0.25]
+        let tipPercentages = [0.18, 0.2, 0.22]
         let bill = Double(billField.text!) ?? 0
         
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]

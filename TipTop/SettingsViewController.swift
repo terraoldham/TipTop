@@ -12,7 +12,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var defaultTip: UISegmentedControl!
     let defaults = UserDefaults.standard
-    let tipPercentages = [0.18, 0.2, 0.25]
+    let tipPercentages = [0.18, 0.2, 0.22]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +23,14 @@ class SettingsViewController: UIViewController {
 
     @IBAction func setDefaultTipPercentage(_ sender: Any) {
         defaults.set(defaultTip.selectedSegmentIndex, forKey: "defaultTipIndex")
-        print(defaults.object(forKey: "defaultTipIndex") as! Int)
         defaults.synchronize()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if let defaultTipIndex = defaults.object(forKey: "defaultTipIndex") {
+            defaultTip.selectedSegmentIndex = defaultTipIndex as! Int
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
