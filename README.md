@@ -7,7 +7,7 @@ iOS Class Prework
 
 Submitted by: **Terra Oldham**
 
-Time spent: **4** hours spent in total
+Time spent: **6** hours spent in total
 
 ## User Stories
 
@@ -41,18 +41,24 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 As part of your pre-work submission, please reflect on the app and answer the following questions below:
 
-**Question 1**: "What are your reactions to the iOS app development platform so far? How would you describe outlets and actions to another developer? Bonus: any idea how they are being implemented under the hood? (It might give you some ideas if you right-click on the Storyboard and click Open As->Source Code")
+**Question 1**: "What are your reactions to the iOS app development platform so far? How would you describe outlets and actions to another developer? Bonus: any idea how they are being implemented under the hood?
 
-**Answer:** [Enter your answer here in a paragraph or two].
+**Answer:** The development of both the Storyboard and the Swift code editor is awesome. I like being able to change things both dynamically and statically while having an interface to help align the two, and curate the UI. I appreciate that there are UI components that have the functionality baked into them as well. For example, the stepper keeps track of the plus/minus count by adding or subtracting incrementally, and this makes implementing it much easier.
 
 Question 2: "Swift uses [Automatic Reference Counting](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html#//apple_ref/doc/uid/TP40014097-CH20-ID49) (ARC), which is not a garbage collector, to manage memory. Can you explain how you can get a strong reference cycle for closures? (There's a section explaining this concept in the link, how would you summarize as simply as possible?)"
 
-**Answer:** [Enter your answer here in a paragraph or two].
-
+**Answer:**  You can make strong references to an instance by assigning
+a class instance to a property, constant or variable. This will prevent
+the reference from being deallocated and will allow it to be accessible
+moving forward. Strong references are not deallocated as long as the
+strong reference persists. A strong reference cycle occurs when an
+instance continually contains strong references (never has zero strong
+references). This can be resolved by allowing some relationships to be
+weak or unowned.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2017] [name of copyright owner]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
