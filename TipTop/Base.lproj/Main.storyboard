@@ -41,49 +41,50 @@
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="eqX-AN-J8D"/>
                                 </connections>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="yc5-YG-X8n">
-                                <rect key="frame" x="16" y="181" width="343" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="18%"/>
-                                    <segment title="20%"/>
-                                    <segment title="22%"/>
-                                </segments>
-                                <connections>
-                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="0iT-Wc-S9P"/>
-                                </connections>
-                            </segmentedControl>
                             <view contentMode="scaleToFill" misplaced="YES" id="DUE-br-Gcq">
-                                <rect key="frame" x="16" y="232" width="343" height="141"/>
+                                <rect key="frame" x="16" y="232" width="343" height="191"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Ts-pv-52z">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="61"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="yc5-YG-X8n">
+                                        <rect key="frame" x="0.0" y="13" width="343" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <segments>
+                                            <segment title="18%"/>
+                                            <segment title="20%"/>
+                                            <segment title="22%"/>
+                                        </segments>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="0iT-Wc-S9P"/>
+                                        </connections>
+                                    </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ujD-i9-qCF">
-                                        <rect key="frame" x="0.0" y="79" width="343" height="54"/>
+                                        <rect key="frame" x="5" y="143" width="343" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="8820.png" id="Afn-EP-1BL">
-                                        <rect key="frame" x="5" y="19" width="19" height="22"/>
+                                        <rect key="frame" x="5" y="84" width="19" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="140405-200.png" id="N6i-n4-EkA">
-                                        <rect key="frame" x="5" y="93" width="33" height="25"/>
+                                        <rect key="frame" x="0.0" y="158" width="33" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Ts-pv-52z">
+                                        <rect key="frame" x="0.0" y="65" width="343" height="61"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="dar-Mw-One" appends="YES" id="F8D-tt-caO"/>
@@ -97,7 +98,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="additionImage" destination="Afn-EP-1BL" id="c3r-Y8-GjY"/>
                         <outlet property="billField" destination="A01-jg-may" id="yXK-0Q-pbN"/>
+                        <outlet property="calculationView" destination="DUE-br-Gcq" id="utK-JJ-GhY"/>
+                        <outlet property="equalsImage" destination="N6i-n4-EkA" id="obw-hi-7I7"/>
                         <outlet property="tipControl" destination="yc5-YG-X8n" id="orQ-Yl-LIN"/>
                         <outlet property="tipLabel" destination="5Ts-pv-52z" id="pO6-KK-XHY"/>
                         <outlet property="totalLabel" destination="ujD-i9-qCF" id="A1u-TA-TTW"/>

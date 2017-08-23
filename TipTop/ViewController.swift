@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet weak var calculationView: UIView!
+    @IBOutlet weak var additionImage: UIImageView!
+    @IBOutlet weak var equalsImage: UIImageView!
     
     let defaults = UserDefaults.standard
     private let bill = 0.0
@@ -23,6 +26,12 @@ class ViewController: UIViewController {
             tipControl.selectedSegmentIndex = defaultTipIndex as! Int
         }
         billField.becomeFirstResponder()
+        calculationView.center.y  += view.bounds.height
+        UIView.animate(withDuration: 0.7, delay: 1.0, options: .curveEaseOut, animations: {
+            self.calculationView.center.y -= self.view.bounds.height
+        }, completion: { finished in
+            print("Animation success")
+        })
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -34,6 +43,8 @@ class ViewController: UIViewController {
 
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
+        
+        
     }
 
     @IBAction func calculateTip(_ sender: Any) {
