@@ -15,6 +15,8 @@
 		0C18A10F1F415948009619EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C18A10D1F415948009619EB /* LaunchScreen.storyboard */; };
 		0C18A11A1F415948009619EB /* TipTopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C18A1191F415948009619EB /* TipTopTests.swift */; };
 		0C18A1251F415948009619EB /* TipTopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C18A1241F415948009619EB /* TipTopUITests.swift */; };
+		0C49C5401F4D06FD0029C23F /* 140405-200.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C49C53F1F4D06FC0029C23F /* 140405-200.png */; };
+		0C49C5421F4D070D0029C23F /* 8820.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C49C5411F4D070D0029C23F /* 8820.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		0C18A1201F415948009619EB /* TipTopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipTopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C18A1241F415948009619EB /* TipTopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipTopUITests.swift; sourceTree = "<group>"; };
 		0C18A1261F415948009619EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C49C53F1F4D06FC0029C23F /* 140405-200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "140405-200.png"; path = "../../140405-200.png"; sourceTree = "<group>"; };
+		0C49C5411F4D070D0029C23F /* 8820.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8820.png; path = ../../8820.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				0C18A1081F415948009619EB /* Main.storyboard */,
 				0C0A84891F43C65A00465990 /* SettingsViewController.swift */,
 				0C18A10B1F415948009619EB /* Assets.xcassets */,
+				0C49C5411F4D070D0029C23F /* 8820.png */,
+				0C49C53F1F4D06FC0029C23F /* 140405-200.png */,
 				0C18A10D1F415948009619EB /* LaunchScreen.storyboard */,
 				0C18A1101F415948009619EB /* Info.plist */,
 			);
@@ -237,6 +243,8 @@
 			files = (
 				0C18A10F1F415948009619EB /* LaunchScreen.storyboard in Resources */,
 				0C18A10C1F415948009619EB /* Assets.xcassets in Resources */,
+				0C49C5421F4D070D0029C23F /* 8820.png in Resources */,
+				0C49C5401F4D06FD0029C23F /* 140405-200.png in Resources */,
 				0C18A10A1F415948009619EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
