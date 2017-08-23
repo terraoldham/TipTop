@@ -25,7 +25,8 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [X] List anything else that you can get done to improve the app functionality!
-- [X] Added images for "+" and "=" to improve look and feel
+- [X] Added images for "+" and "=" to improve look and feel and added
+  color
 - [X] Added stepper to calculate individual cost for groups
 
 ## Video Walkthrough
