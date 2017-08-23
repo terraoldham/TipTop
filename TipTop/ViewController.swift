@@ -16,6 +16,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var calculationView: UIView!
     @IBOutlet weak var additionImage: UIImageView!
     @IBOutlet weak var equalsImage: UIImageView!
+    @IBOutlet weak var groupSizeLabel: UILabel!
+    @IBOutlet weak var groupControl: UIStepper!
+    @IBAction func groupControlChanged(_ sender: UIStepper) {
+        groupSizeLabel.text = Int(sender.value).description
+        print(groupSizeLabel)
+    }
+
     
     let defaults = UserDefaults.standard
     private let bill = 0.0
@@ -54,9 +61,12 @@ class ViewController: UIViewController {
         
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
-        
+        let individualTotal = total / groupControl.value
+        groupControl.wraps = true
+        groupControl.autorepeat = true
+        groupControl.maximumValue = 10
         tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        totalLabel.text = String(format: "$%.2f", individualTotal)
 
     }
     
