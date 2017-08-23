@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBAction func groupControlChanged(_ sender: UIStepper) {
         groupSizeLabel.text = Int(sender.value).description
         print(groupSizeLabel)
+        calculateTip((Any).self)
     }
 
     
@@ -29,6 +30,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        groupControl.value = 1
         if let defaultTipIndex = defaults.object(forKey: "defaultTipIndex") {
             tipControl.selectedSegmentIndex = defaultTipIndex as! Int
         }
@@ -65,6 +67,7 @@ class ViewController: UIViewController {
         groupControl.wraps = true
         groupControl.autorepeat = true
         groupControl.maximumValue = 10
+        groupControl.minimumValue = 1
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", individualTotal)
 
